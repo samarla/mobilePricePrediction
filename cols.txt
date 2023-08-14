@@ -1,70 +1,65 @@
-ignorable_cols = [
-    'Built-in accelerometer',
-    'Aux. 4 Camera Image Sensor',
-    'Supported Cellular Data Links'
-
-]
-cat_cols = [
-    'Touchscreen Type',
-    'Camera Image Sensor',
-    'Platform',
-    'Battery',
-    'Secondary Camera Sensor',
-    'USB',
-    'Audio Output:',
-    'Loudspeaker(s):',
-    'Aux. 2 Camera Image Sensor',
-    'Aux. Camera Image Sensor',
-    'Aux. 3 Camera Image Sensor',
-    'Sec. Aux. Cam. Image Sensor',
-    'Display Type',
-    'USB Connector',
-    'Protection from solid materials',
-    'Microphone(s)',
-    'RAM Type',
-    'Bluetooth',
-    'Flash',
-    'Protection from liquids',
-    'FM Radio Receiver',
-    'Non-volatile Memory Interface',
-    'Scratch Resistant Screen',
-    'Operating System',
-    'Brand',
-    'Graphical Controller',
-    'CPU',
-    'Market Countries'
+cat_cols2 = [
+    'touchscreen_type',
+    'camera_sensor_image',
+    'platform',
+    'battery',
+    'secondary_camera_sensor',
+    'usb',
+    'audio_output',
+    'loudspeakers',
+    'aux_2_camera_image_sensor',
+    'aux_camera_image_sensor',
+    'aux_3_camera_image_sensor',
+    'sec_aux_camera_image_sensor',
+    'display_type',
+    'usb_connector',
+    'protection_from_solid_materials',
+    'microphones',
+    'ram_type',
+    'bluetooth',
+    'flash',
+    'protection_from_liquids',
+    'fm_radio_receiver',
+    'non_volatile_memory_interface',
+    'scratch_resistant_screen',
+    'operating_system',
+    'brand',
+    'graphical_controller',
+    'cpu',
+    'market_countries'
 
 ]
 
-num_cols = [
-    'RAM Capacity (converted)',
-    'Non-volatile Memory Capacity (converted)',
-    'Number of effective pixels',
-    'Resolution',
-    'Pixel Density',
-    'Display Diagonal',
-    'Display Area Utilization',
-    'Depth',
-    'Width',
-    'Height',
+num_cols2 = [
+    'ram_capacity',
+    'non_volatile_memory_capacity',
+    'number_of_effective_pixels',
+    'pixel_density',
+    'display_diagonal',
+    'display_area_utilization',
+    'depth',
+    'width',
+    'height',
 
 ]
 
-date_cols = [
-    'Released'
+date_cols2 = [
+    'release_year',
+    'release_month',
+    'release_day'
 ]
 
-obj_cols = [
-    'Complementary Phone Services',
-    'Wireless LAN',
-    'Complementary Satellite Services',
-    'Wireless Services',
-    'USB Services',
-    'Sec. Supported Cellular Networks:',
-    'Supported Cellular Bands',
-    'Model'
+obj_cols2 = [
+    'complementary_phone_services',
+    'wireless_lan',
+    'complementary_satellite_services',
+    'wireless_services',
+    'usb_services',
+    'sec_supported_cellular_networks',
+    'supported_cellular_bands',
+    'model'
 
 ]
 target_cols = [
-    'Price'
+    'price'
 ]
