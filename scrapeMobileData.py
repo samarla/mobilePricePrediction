@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import tqdm
 
-df = pd.read_excel('mobileUrlsList.xlsx', index_col=0)
+df = pd.read_excel('data\mobileUrlsList.xlsx', index_col=0)
 
 root_url = "https://phonedb.net/"
 
@@ -23,6 +23,7 @@ def scrape_mobile(url):
     # make a soup out of it
     soup = BeautifulSoup(response.text, 'html.parser')
     # find the table in the soup
+
     table = soup.find('table')
     # get the table data row wise
     table_data = []
@@ -50,7 +51,7 @@ def scrape_mobile(url):
 num_workers = 8
 results = []
 # iterate through urls over the dataframe
-for mobile_url in tqdm.tqdm(df.iloc[10000:15000].itertuples(), desc="Scraping Mobile URLs"):
+for mobile_url in tqdm.tqdm(df.iloc[0:100].itertuples(), desc="Scraping Mobile URLs"):
     # concat to get complete url of a mobile
     url = root_url+str(mobile_url[1])
     # print(url)

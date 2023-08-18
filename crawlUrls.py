@@ -1,17 +1,12 @@
 import requests
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
-import re
-import csv
 import pandas as pd
 
 
 url = "https://phonedb.net/index.php?m=device&s=list&filter=0"
 response = requests.get(url=url)
 html = BeautifulSoup(response.text, 'html.parser')
-
-# with open('sample_html.html', 'r') as f:
-# soup = BeautifulSoup(html, 'html.parser')
 
 crawl_url_list = []
 url_list = html.css.select('.container:nth-child(9) > a')
