@@ -31,7 +31,10 @@ def scrape_mobile(url):
         row_data = []
         for cell in row.find_all('td'):
             row_data.append(cell.get_text(strip=True))
-        table_data.append(row_data)
+        if len(row_data) == 2:
+            table_data.append(row_data)
+        else:
+            continue
 
     # create an empty dict to add all the specs as key-value pair
     d = {}
@@ -51,7 +54,7 @@ def scrape_mobile(url):
 num_workers = 8
 results = []
 # iterate through urls over the dataframe
-for mobile_url in tqdm.tqdm(df.iloc[0:100].itertuples(), desc="Scraping Mobile URLs"):
+for mobile_url in tqdm.tqdm(df.iloc[0:5000].itertuples(), desc="Scraping Mobile URLs"):
     # concat to get complete url of a mobile
     url = root_url+str(mobile_url[1])
     # print(url)
@@ -63,7 +66,7 @@ for mobile_url in tqdm.tqdm(df.iloc[0:100].itertuples(), desc="Scraping Mobile U
 scraped_data_list = [result.result()
                      for result in results if result.result() is not None]
 mobile_db = pd.DataFrame(scraped_data_list)
-mobile_db.to_excel('mobileDB_10000_to_15000.xlsx', index=False)
+mobile_db.to_excel('data\mobileDB__upto_5000.xlsx', index=False)
 
 # parallel_dicts = {}
 # for i in range(8):
